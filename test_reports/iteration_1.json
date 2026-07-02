@@ -1,0 +1,45 @@
+{
+  "summary": "Frontend testing of Thompson Square Medical Centre static landing page. Verified welcome modal bug fix (visible close X, no lag), all three close mechanisms (X, Escape, backdrop), hero section, header nav, all data-testid elements, images, and mobile viewport. All acceptance criteria met.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "WelcomeModal uses arbitrary Tailwind selector [&>button] which correctly styles the Radix default DialogClose - implementation is clean and works.",
+    "All CTAs use tel:/maps links; no API calls except harmless GET /api/ on mount as expected.",
+    "Nav data-testids follow href convention (nav-about, nav-services, nav-reviews, nav-location) - consistent."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (frontend-only test)", "frontend": "100%"},
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Static landing page. Welcome modal opens ~700ms after load. Close X visible at top-right of DialogContent (35x35 white circle). Modal closes via X, Escape, and backdrop click. All 5 images load (Dr. Aliya PNG, clinic building, hero bg, family, doctor for Doctor section). No backend routes to test other than harmless GET /api/.",
+  "test_results": {
+    "modal_appears_on_load_700ms": "PASS",
+    "close_x_visible_desktop_1920x1080": "PASS (bounding box 35x35 at top-right)",
+    "close_x_visible_mobile_390x844": "PASS (bounding box 35x35)",
+    "close_x_click_closes_modal_desktop": "PASS",
+    "close_x_click_closes_modal_mobile": "PASS",
+    "escape_key_closes_modal": "PASS",
+    "backdrop_click_closes_modal": "PASS",
+    "page_interactive_after_close": "PASS (scrolled to 576)",
+    "modal_call_btn_tel_href": "PASS (tel:9058781977)",
+    "modal_directions_btn_maps_href_new_tab": "PASS (target=_blank)",
+    "hero_badge_visible": "PASS",
+    "hero_call_btn_tel_href": "PASS (tel:9058781977)",
+    "hero_services_btn_anchor": "PASS (#services)",
+    "header_call_btn_tel_href": "PASS (tel:9058781977)",
+    "nav_testids_present": "PASS (nav-about, nav-services, nav-reviews, nav-location)",
+    "nav_scrolls_to_section": "PASS (scrollY=1973 after nav-services click)",
+    "all_images_loaded": "PASS (5/5 - doctor PNG, clinic building, hero bg, family, doctor duplicate)",
+    "google_map_iframe_loaded": "PASS (embed URL correct)"
+  }
+}

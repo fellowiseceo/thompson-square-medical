@@ -23,7 +23,13 @@ export const HOURS = [
 
 export const IMAGES = {
   doctor:
-    "https://customer-assets.emergentagent.com/job_b98b17ff-253d-4fdf-aa37-1afca0eb451c/artifacts/n3te78lh_WhatsApp%20Image%202026-07-02%20at%203.23.23%20PM.jpeg",
+    "https://customer-assets.emergentagent.com/job_dr-aliya-family/artifacts/dscxl2sv_Gemini_Generated_Image_r7re2fr7re2fr7re-removebg-preview.png",
+  building:
+    "https://customer-assets.emergentagent.com/job_dr-aliya-family/artifacts/9kclix7j_image.png",
+  building2:
+    "https://customer-assets.emergentagent.com/job_dr-aliya-family/artifacts/4dizu0mh_image.png",
+  heroBg:
+    "https://images.unsplash.com/photo-1631217871099-88310a909a32?w=1920&q=80",
   waiting: "https://images.unsplash.com/photo-1762625570087-6d98fca29531?w=1200&q=80",
   reception:
     "https://images.pexels.com/photos/6809658/pexels-photo-6809658.jpeg?auto=compress&cs=tinysrgb&w=1200",

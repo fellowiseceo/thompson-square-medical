@@ -13,7 +13,9 @@ export const WelcomeModal = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setOpen(true), 1200);
+    const img = new Image();
+    img.src = IMAGES.desk;
+    const t = setTimeout(() => setOpen(true), 700);
     return () => clearTimeout(t);
   }, []);
 
@@ -21,7 +23,7 @@ export const WelcomeModal = () => {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent
         data-testid="welcome-modal"
-        className="max-w-lg overflow-hidden rounded-3xl border-none p-0 gap-0"
+        className="max-w-lg overflow-hidden rounded-3xl border-none p-0 gap-0 [&>button]:top-4 [&>button]:right-4 [&>button]:h-9 [&>button]:w-9 [&>button]:grid [&>button]:place-items-center [&>button]:rounded-full [&>button]:bg-white/95 [&>button]:text-[#1a2e24] [&>button]:opacity-100 [&>button]:shadow-lg [&>button]:z-30 [&>button:hover]:bg-white [&>button:hover]:scale-105 [&>button>svg]:h-5 [&>button>svg]:w-5"
       >
         <div className="relative h-40">
           <img
@@ -29,8 +31,8 @@ export const WelcomeModal = () => {
             alt="Thompson Square Medical Centre reception"
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e24]/80 to-[#1a2e24]/20" />
-          <span className="absolute bottom-4 left-6 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-[#4a7a61]">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e24]/85 to-[#1a2e24]/20" />
+          <span className="absolute bottom-4 left-6 inline-flex items-center gap-2 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-[#4a7a61]">
             <Sparkles className="h-3.5 w-3.5" /> Now Accepting New Patients
           </span>
         </div>

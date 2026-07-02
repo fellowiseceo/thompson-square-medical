@@ -8,12 +8,13 @@ export const Doctor = () => {
     <section id="doctor" className="py-20 lg:py-28 bg-[#1a2e24] text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
         <div className="relative">
-          <div className="absolute inset-0 -m-4 rounded-[2.5rem] bg-[#4a7a61]/20 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] bg-[#eaf0ec] shadow-2xl">
+          <div className="absolute inset-0 -m-4 rounded-[2.5rem] bg-[#4a7a61]/25 blur-2xl" />
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#2c5140] to-[#1f3a2d] shadow-2xl">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(127,212,168,0.25),transparent_60%)]" />
             <img
               src={IMAGES.doctor}
               alt="Dr. Aliya Ali, Family Physician at Thompson Square Medical Centre"
-              className="w-full h-[440px] object-cover object-top"
+              className="relative w-full h-[480px] object-contain object-bottom pt-8"
               loading="lazy"
             />
           </div>

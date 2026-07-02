@@ -31,8 +31,8 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div className="grid grid-cols-2 gap-4">
             <img
-              src={IMAGES.reception}
-              alt="Patient being welcomed at the Thompson Square reception desk"
+              src={IMAGES.building}
+              alt="Thompson Square Medical Centre storefront at 9021 Derry Rd, Milton"
               className="rounded-2xl object-cover h-56 lg:h-72 w-full shadow-lg mt-8"
               loading="lazy"
             />
