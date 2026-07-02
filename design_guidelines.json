@@ -1,0 +1,118 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 1: Organic & Earthy",
+  "brand_identity": {
+    "name": "Thompson Square Medical Centre",
+    "doctor": "Dr. Aliya Ali",
+    "tone": "Warm, trustworthy, compassionate, professional, safe",
+    "primary_focus": "Family healthcare and walk-in clinic focused on human-centered care and friction reduction."
+  },
+  "clinic_details": {
+    "address": "9021 Derry Rd #12, Milton, ON L9T 7Y9",
+    "phone": "(905) 878-1977",
+    "email": "ayubakhthar@gmail.com",
+    "hours": {
+      "Mon": "Closed",
+      "Tue_Fri": "10:00 AM - 5:00 PM",
+      "Sat": "10:00 AM - 4:00 PM",
+      "Sun": "Closed"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Outfit",
+      "body": "Manrope"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-[#1A2E24]",
+      "h2": "text-3xl sm:text-4xl font-medium tracking-tight text-[#1A2E24]",
+      "h3": "text-xl sm:text-2xl font-medium text-[#2C4135]",
+      "body": "text-base sm:text-lg font-normal text-[#4A5D53] leading-relaxed",
+      "overline": "text-sm font-bold tracking-[0.2em] uppercase text-[#4A7A61]"
+    },
+    "rules": [
+      "Avoid 'Inter' for headings. Use Outfit for a human-centered, modern feel.",
+      "Left-align dense text blocks. Center align only for small, impactful sections like hero overlays if appropriate.",
+      "Never exceed text-6xl for hero headings."
+    ]
+  },
+  "colors": {
+    "background": {
+      "primary": "#F9F8F6",
+      "secondary": "#FFFFFF",
+      "accent_soft": "#EAF0EC"
+    },
+    "text": {
+      "primary": "#1A2E24",
+      "secondary": "#4A5D53",
+      "muted": "#7A8A81"
+    },
+    "brand": {
+      "primary": "#4A7A61",
+      "primary_hover": "#3D6651",
+      "accent": "#D1E2C4"
+    },
+    "rules": [
+      "Avoid sterile clinic blues and stark whites. Rely on warm bone-white (#F9F8F6) and sage greens to create trust.",
+      "Always ensure 4.5:1 contrast for text.",
+      "Primary brand color (#4A7A61) is strictly for CTAs and critical highlights."
+    ]
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Generous spacing (Tailwind p-6, p-12, py-24) to create a relaxed, unhurried atmosphere.",
+    "container": "max-w-7xl mx-auto px-6 lg:px-8",
+    "grid_strategy": "Bento Grid Mode A: Asymmetrical grids with empty space. Avoid standard rigid bootstrap columns.",
+    "border_radius": "rounded-2xl to rounded-3xl to soften the interface and make it approachable."
+  },
+  "components_strategy": {
+    "header": "Sticky nav with crystal glassmorphism (backdrop-blur-xl bg-[#F9F8F6]/80, border-b border-white/40). Includes Logo, Links, and 'Call Now' CTA.",
+    "hero": "Split asymmetrical layout. Copy on the left, soft-edged imagery on the right. Must feature 'Accepting New Patients & Walk-ins Welcome'.",
+    "modal_popup": "Shadcn Dialog. Glassmorphism overlay (bg-black/20 backdrop-blur-sm). Triggered on load. Title: 'Welcome to Thompson Square Medical Centre'. CTA: 'Call to Book' or 'Get Directions'.",
+    "services_grid": "Soft neumorphism or flat cards with 1px delicate border (border-[#EAF0EC]) and soft background colors. Lift on hover.",
+    "doctor_profile": "Side-by-side asymmetrical layout. Generous padding. Photo of Dr. Aliya Ali with rounded corners.",
+    "buttons": "Pill-shaped (rounded-full). Explicit hover states (e.g., hover:bg-[#3D6651] hover:text-white).",
+    "icons": "Use 'lucide-react'. Avoid mixing icon sets."
+  },
+  "motion_and_interaction": {
+    "hover_states": "Interactive elements must lift slightly (-translate-y-1) and cast a diffuse shadow (shadow-sm).",
+    "entrance": "Staggered fade-in for lists and grids.",
+    "accessibility": "Respect prefers-reduced-motion. Ensure focus states are obvious (focus:ring-2 focus:ring-[#4A7A61])."
+  },
+  "media": {
+    "images": {
+      "doctor_headshot": {
+        "url": "https://customer-assets.emergentagent.com/job_b98b17ff-253d-4fdf-aa37-1afca0eb451c/artifacts/n3te78lh_WhatsApp%20Image%202026-07-02%20at%203.23.23%20PM.jpeg",
+        "description": "Dr. Aliya Ali professional headshot on white background",
+        "usage": "Meet Your Doctor section"
+      },
+      "clinic_waiting_room": {
+        "url": "https://images.unsplash.com/photo-1762625570087-6d98fca29531",
+        "description": "Modern waiting room with comfortable chairs and soft lighting",
+        "usage": "Hero section background or About the clinic visual"
+      },
+      "reception_desk": {
+        "url": "https://images.pexels.com/photos/6809658/pexels-photo-6809658.jpeg",
+        "description": "Patient consulting receptionist in modern clinic",
+        "usage": "Contact section or Walk-in information"
+      },
+      "doctor_patient_interaction": {
+        "url": "https://images.unsplash.com/photo-1631217871099-88310a909a32",
+        "description": "Compassionate doctor interaction with female patient",
+        "usage": "Services or Testimonials section"
+      }
+    }
+  },
+  "testing": {
+    "attributes": "All interactive elements, buttons, and important text MUST use data-testid attributes (e.g., data-testid='hero-cta-call')."
+  },
+  "instructions_to_main_agent": [
+    "Build a responsive, single-page React application with Tailwind CSS based on these guidelines.",
+    "Import Outfit and Manrope fonts.",
+    "Use Shadcn Dialog component for the initial Welcome modal popup.",
+    "Incorporate the required sections: Hero, Services Grid (Medical Services, Preventive Care, Women's Health, Pediatric Services), Meet Your Doctor, About, Testimonials, Hours & Location.",
+    "In the Hours & Location section, include a visually appealing Google Maps link or iframe integration with a clear 'Get Directions' button.",
+    "Ensure 'Accepting New Patients + Walk-ins Welcome' is visible immediately above the fold.",
+    "Adhere to the 'Organic & Earthy' archetype palette for a compassionate and trustworthy feel.",
+    "Do not include backend form submissions. Make CTAs redirect to a call protocol (tel:) or map directions."
+  ]
+}
