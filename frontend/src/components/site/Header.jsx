@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone, Clock, Mail, MapPin } from "lucide-react";
-import { CLINIC } from "@/data";
+import { CLINIC, IMAGES } from "@/data";
 
 const NAV = [
   { label: "About", href: "#about" },
@@ -62,12 +62,12 @@ export const Header = () => {
       {/* Main bar */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-[72px]">
         <a href="#top" data-testid="logo-link" className="flex items-center gap-3">
-          <span
-            className={`grid place-items-center h-10 w-10 rounded-xl font-display font-semibold text-lg transition-colors ${
-              light ? "bg-white/15 text-white backdrop-blur-md" : "bg-[#4a7a61] text-white"
-            }`}
-          >
-            T
+          <span className="grid place-items-center h-11 w-11 rounded-xl bg-white shadow-sm overflow-hidden">
+            <img
+              src={IMAGES.logo}
+              alt="Thompson Square Medical Centre logo"
+              className="h-full w-full object-contain scale-[1.7]"
+            />
           </span>
           <span className="leading-tight">
             <span

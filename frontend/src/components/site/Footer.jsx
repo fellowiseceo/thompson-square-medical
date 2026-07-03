@@ -1,5 +1,5 @@
 import { Phone, Navigation } from "lucide-react";
-import { CLINIC } from "@/data";
+import { CLINIC, IMAGES } from "@/data";
 
 export const Footer = () => {
   return (
@@ -37,8 +37,12 @@ export const Footer = () => {
 
         <div className="border-t border-white/10 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-3">
-            <span className="grid place-items-center h-9 w-9 rounded-lg bg-[#4a7a61] text-white font-display font-semibold">
-              T
+            <span className="grid place-items-center h-10 w-10 rounded-lg bg-white overflow-hidden">
+              <img
+                src={IMAGES.logo}
+                alt="Thompson Square Medical Centre logo"
+                className="h-full w-full object-contain scale-[1.7]"
+              />
             </span>
             <span className="font-display font-medium text-white">
               Thompson Square Medical Centre
