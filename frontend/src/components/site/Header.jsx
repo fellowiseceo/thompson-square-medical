@@ -5,6 +5,7 @@ import { CLINIC } from "@/data";
 const NAV = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Meet Dr. Ali", href: "#doctor" },
   { label: "Testimonials", href: "#reviews" },
   { label: "Hours & Location", href: "#location" },
 ];
