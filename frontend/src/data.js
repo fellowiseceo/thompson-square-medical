@@ -59,7 +59,7 @@ export const SERVICE_GROUPS = [
   },
   {
     id: "preventive",
-    icon: "HeartPulse",
+    icon: "ShieldCheck",
     title: "Preventive Care",
     blurb: "Proactive wellness to keep you and your family healthy.",
     items: [
@@ -73,7 +73,7 @@ export const SERVICE_GROUPS = [
   },
   {
     id: "womens",
-    icon: "Baby",
+    icon: "Venus",
     title: "Women's Health",
     blurb: "Dedicated care through every chapter, including low-risk obstetrics.",
     items: [
@@ -86,7 +86,7 @@ export const SERVICE_GROUPS = [
   },
   {
     id: "pediatric",
-    icon: "Users",
+    icon: "Baby",
     title: "Pediatric Services",
     blurb: "Gentle, attentive care for infants, children & adolescents.",
     items: [

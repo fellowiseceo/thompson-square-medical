@@ -1,4 +1,4 @@
-import { Heart, Home, Award, DoorOpen } from "lucide-react";
+import { Heart, Home, Award, DoorOpen, MapPin } from "lucide-react";
 import { IMAGES } from "@/data";
 
 const VALUES = [
@@ -28,22 +28,34 @@ export const About = () => {
   return (
     <section id="about" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src={IMAGES.building}
-              alt="Thompson Square Medical Centre storefront at 9021 Derry Rd, Milton"
-              className="rounded-2xl object-cover h-56 lg:h-72 w-full shadow-lg mt-8"
-              loading="lazy"
-            />
-            <img
-              src={IMAGES.family}
-              alt="Dr. Aliya Ali providing family-centred care to a mother and child"
-              className="rounded-2xl object-cover h-56 lg:h-72 w-full shadow-lg"
-              loading="lazy"
-            />
+        <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+          {/* Image composition */}
+          <div className="relative">
+            <div className="overflow-hidden rounded-[2rem] shadow-2xl shadow-[#1a2e24]/10">
+              <img
+                src={IMAGES.building}
+                alt="Thompson Square Medical Centre storefront at 9021 Derry Rd, Milton"
+                className="w-full h-[380px] lg:h-[460px] object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="absolute -bottom-8 -right-4 sm:right-6 w-44 sm:w-52 overflow-hidden rounded-2xl border-4 border-white shadow-xl">
+              <img
+                src={IMAGES.family}
+                alt="Dr. Ali providing family-centred care to a mother and child"
+                className="w-full h-40 object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <div className="absolute -top-5 -left-4 sm:left-6 rounded-2xl bg-[#4a7a61] text-white px-5 py-4 shadow-xl">
+              <p className="font-display text-2xl font-semibold leading-none">10+ yrs</p>
+              <p className="text-xs text-white/85 mt-1">Serving Milton families</p>
+            </div>
           </div>
 
+          {/* Copy */}
           <div>
             <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#4a7a61]">
               About Us
@@ -57,25 +69,29 @@ export const About = () => {
               collaborative decision-making — building long-term relationships that
               help patients thrive at every stage of life.
             </p>
-
-            <div className="mt-8 grid sm:grid-cols-2 gap-4">
-              {VALUES.map((v) => (
-                <div
-                  key={v.title}
-                  data-testid={`value-${v.title.toLowerCase().replace(/\s|-/g, "")}`}
-                  className="rounded-2xl border border-[#eaf0ec] bg-[#f9f8f6] p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
-                >
-                  <span className="grid place-items-center h-11 w-11 rounded-xl bg-[#d1e2c4]/60 text-[#4a7a61]">
-                    <v.icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="mt-4 font-display text-lg font-medium text-[#1a2e24]">
-                    {v.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm text-[#4a5d53] leading-relaxed">{v.text}</p>
-                </div>
-              ))}
-            </div>
+            <p className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[#4a7a61]">
+              <MapPin className="h-4 w-4" /> 9021 Derry Rd #12, Milton, ON L9T 7Y9
+            </p>
           </div>
+        </div>
+
+        {/* Values */}
+        <div className="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {VALUES.map((v) => (
+            <div
+              key={v.title}
+              data-testid={`value-${v.title.toLowerCase().replace(/\s|-/g, "")}`}
+              className="rounded-2xl border border-[#eaf0ec] bg-[#f9f8f6] p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            >
+              <span className="grid place-items-center h-12 w-12 rounded-xl bg-[#d1e2c4]/60 text-[#4a7a61]">
+                <v.icon className="h-6 w-6" />
+              </span>
+              <h3 className="mt-4 font-display text-lg font-medium text-[#1a2e24]">
+                {v.title}
+              </h3>
+              <p className="mt-1.5 text-sm text-[#4a5d53] leading-relaxed">{v.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
-import { Stethoscope, HeartPulse, Baby, Users, Check } from "lucide-react";
+import { Stethoscope, ShieldCheck, Venus, Baby, Check } from "lucide-react";
 import { SERVICE_GROUPS } from "@/data";
 
-const ICONS = { Stethoscope, HeartPulse, Baby, Users };
+const ICONS = { Stethoscope, ShieldCheck, Venus, Baby };
 
 export const Services = () => {
   return (
