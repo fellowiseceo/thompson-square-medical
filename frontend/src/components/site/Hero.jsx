@@ -18,10 +18,10 @@ export const Hero = () => {
           src={IMAGES.heroBg}
           alt=""
           aria-hidden="true"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#12241c]/92 via-[#16291f]/88 to-[#0f2019]/94" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(74,122,97,0.28),transparent_60%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f2019]/95 via-[#12241c]/96 to-[#0f2019]/98" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(74,122,97,0.35),transparent_65%)]" />
       </div>
 
       <div className="relative z-20 w-full max-w-4xl mx-auto px-6 lg:px-8 pt-32 pb-24 text-center">
