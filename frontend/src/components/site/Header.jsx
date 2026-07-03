@@ -62,11 +62,11 @@ export const Header = () => {
       {/* Main bar */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-[72px]">
         <a href="#top" data-testid="logo-link" className="flex items-center gap-3">
-          <span className="grid place-items-center h-11 w-11 rounded-xl bg-white shadow-sm overflow-hidden">
+          <span className="grid place-items-center h-11 w-11 rounded-xl bg-white shadow-sm p-1.5">
             <img
               src={IMAGES.logo}
               alt="Thompson Square Medical Centre logo"
-              className="h-full w-full object-contain scale-[1.7]"
+              className="h-full w-full object-contain"
             />
           </span>
           <span className="leading-tight">

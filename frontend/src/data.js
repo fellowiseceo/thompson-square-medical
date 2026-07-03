@@ -22,8 +22,7 @@ export const HOURS = [
 ];
 
 export const IMAGES = {
-  logo:
-    "https://customer-assets.emergentagent.com/job_dr-aliya-family/artifacts/soym51h7_Thompson_Square_Medical_Centre_logo_202607031452-removebg-preview.png",
+  logo: "/logo.png",
   doctor:
     "https://customer-assets.emergentagent.com/job_dr-aliya-family/artifacts/dscxl2sv_Gemini_Generated_Image_r7re2fr7re2fr7re-removebg-preview.png",
   building:

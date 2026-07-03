@@ -37,11 +37,11 @@ export const Footer = () => {
 
         <div className="border-t border-white/10 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <div className="flex items-center gap-3">
-            <span className="grid place-items-center h-10 w-10 rounded-lg bg-white overflow-hidden">
+            <span className="grid place-items-center h-10 w-10 rounded-lg bg-white p-1.5">
               <img
                 src={IMAGES.logo}
                 alt="Thompson Square Medical Centre logo"
-                className="h-full w-full object-contain scale-[1.7]"
+                className="h-full w-full object-contain"
               />
             </span>
             <span className="font-display font-medium text-white">

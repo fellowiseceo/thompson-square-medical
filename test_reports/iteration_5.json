@@ -1,0 +1,22 @@
+{
+  "summary": "Frontend-only regression verifying header/footer logo fix on Thompson Square Medical Centre landing page. Verified /logo.png is served (HTTP 200), header <img> inside data-testid='logo-link' loads (naturalWidth=235, natural size 235x235 rendered at 32x32 with object-contain), src ends with '/logo.png', emblem is centered and not clipped over both dark hero and scrolled light header. Footer logo loads with same asset. All nav links, header tel link, welcome modal (opens and closes via Escape), and logo click (scrolls to #top) work. Zero broken images across the page (6 imgs total).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "WelcomeModal uses shadcn Dialog default close (X) button which lacks an explicit data-testid; consider adding data-testid='welcome-modal-close' on that button for more robust automated close-flow testing (currently we rely on Escape key)."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (not requested)", "frontend": "100%"},
+  "test_credentials": "None - static site",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Logo fix verified. /logo.png returns 200; header+footer imgs load with naturalWidth=235; header logo chip is 44x44 (p-1.5) rendering the 32x32 img with object-contain so no clipping. Welcome modal test-ids present: welcome-modal, modal-call-btn, modal-directions-btn (no dedicated close testid; close works via Escape or shadcn X). Nav test-ids: nav-about, nav-services, nav-doctor, nav-reviews, nav-location, header-call-btn, mobile-menu-toggle, footer-call-btn, footer-directions-btn, logo-link. Total imgs on page: 6, broken: 0.",
+  "rca of the issue": "N/A - regression test for a previously-fixed bug. Logo was previously clipped because the source PNG had oversized transparent padding + a scale/overflow-hidden wrapper. Fix trimmed the PNG (now tight 235x235) and switched the chip to bg-white p-1.5 with object-contain + no scale/overflow. Verified: naturalWidth 235, rendered 32x32 inside a 44x44 chip -> centered, fully visible."
+}
