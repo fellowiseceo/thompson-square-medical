@@ -6,7 +6,7 @@ const NAV = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Our Doctors", href: "#doctor" },
-  { label: "Our Clinic", href: "#gallery" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Hours & Location", href: "#location" },
 ];
 

@@ -37,10 +37,10 @@ export const IMAGES = {
 };
 
 export const GALLERY = [
-  { src: "/clinic-exterior.jpg", alt: "Thompson Square Medical Centre storefront at 9021 Derry Rd, Milton" },
-  { src: "/clinic-reception.jpg", alt: "Welcoming front reception desk and waiting area at Thompson Square Medical Centre" },
-  { src: "/clinic-exam-1.jpg", alt: "Bright examination room with medical equipment at Thompson Square Medical Centre" },
-  { src: "/clinic-hallway.jpg", alt: "Clean patient hallway with treatment bays at Thompson Square Medical Centre" },
+  { src: "/clinic-exterior.jpg", alt: "Front entrance at 9021 Derry Rd, Milton" },
+  { src: "/clinic-reception.jpg", alt: "Welcoming front reception desk and waiting area" },
+  { src: "/clinic-exam-1.jpg", alt: "Bright examination room with medical equipment" },
+  { src: "/clinic-hallway.jpg", alt: "Clean patient hallway with treatment bays" },
   { src: "/clinic-exam-2.jpg", alt: "Comfortable consultation and examination room" },
   { src: "/clinic-procedure.jpg", alt: "Procedure and vitals room with weighing and monitoring equipment" },
 ];
