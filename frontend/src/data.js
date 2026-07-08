@@ -106,6 +106,37 @@ export const HIGHLIGHTS = [
   { icon: "CalendarCheck", stat: "Since 2019", label: "Low-risk obstetrical care" },
 ];
 
+export const DOCTORS = [
+  {
+    id: "aliya",
+    name: "Dr. Aliya Ali",
+    role: "Family Physician · Low-Risk Obstetrics",
+    photo: "/dr-aliya.jpg",
+    credentials: ["MD", "Family Medicine", "Low-Risk Obstetrics Fellowship"],
+    accepting: false,
+    bio: [
+      "Dr. Aliya Ali completed postgraduate training in Family Medicine, followed by a Fellowship in Low-Risk Obstetrics at the University of Toronto. She graduated from medical school with distinction and honors and completed a five-year residency in Obstetrics and Gynecology.",
+      "She has practiced in Women's Health, Pediatrics and Emergency Medicine, caring for patients across all stages of life, and has provided low-risk obstetrical care since 2019. Licensed in Canada and affiliated with Trillium Health Partners.",
+    ],
+    languages: "English · Urdu · Punjabi · Pashto",
+    expertise: ["Women's Health", "Low-Risk Obstetrics", "Preventive Care", "Pediatrics"],
+  },
+  {
+    id: "irma",
+    name: "Dr. Irma Khan",
+    role: "Family Physician",
+    photo: "/dr-irma.jpg",
+    credentials: ["CCFP", "MRCGP", "DRCOG"],
+    accepting: true,
+    bio: [
+      "Dr. Irma Khan, MD is currently accepting new patients at Thompson Square Medical Centre. A highly qualified practitioner with credentials including MRCGP, DRCOG and CCFP, she brings a wealth of expertise to the Milton community.",
+      "Her practice is centred on compassionate, comprehensive family medical care for individuals and families. Operating as a family & walk-in practice, she ensures patients have flexible access to healthcare when they need it most.",
+    ],
+    languages: null,
+    expertise: ["Women's Health", "Mental Health", "Elderly Care", "Chronic Condition Management"],
+  },
+];
+
 export const TESTIMONIALS = [
   {
     quote:

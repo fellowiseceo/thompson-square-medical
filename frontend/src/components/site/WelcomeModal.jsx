@@ -40,12 +40,13 @@ export const WelcomeModal = () => {
         <div className="p-6 sm:p-8">
           <DialogHeader>
             <DialogTitle className="font-display text-2xl font-medium text-[#1a2e24] text-left">
-              Welcome to Thompson Square Medical Centre
+              Now Accepting New Patients
             </DialogTitle>
             <DialogDescription className="text-left text-[#4a5d53] leading-relaxed pt-2">
-              Dr. Aliya Ali is welcoming <strong>new patients</strong> and{" "}
-              <strong>walk-ins</strong> into her Milton family practice.
-              Compassionate, patient-centred care for every stage of life.
+              <strong>Dr. Irma Khan</strong> (CCFP, MRCGP, DRCOG) is currently
+              welcoming <strong>new patients</strong> at Thompson Square Medical
+              Centre. Walk-in services are also available for non-registered
+              patients, subject to daily clinic capacity.
             </DialogDescription>
           </DialogHeader>
 

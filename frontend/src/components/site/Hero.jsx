@@ -73,7 +73,7 @@ export const Hero = () => {
         </div>
 
         <p className="reveal mt-8 inline-flex items-center gap-2 text-sm text-[#7fd4a8]" style={{ animationDelay: "0.25s" }}>
-          <ShieldCheck className="h-4 w-4" /> Now accepting new patients
+          <ShieldCheck className="h-4 w-4" /> Dr. Irma Khan now accepting new patients
         </p>
       </div>
 

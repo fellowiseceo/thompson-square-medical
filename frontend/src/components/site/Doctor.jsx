@@ -1,80 +1,104 @@
-import { Award, Languages, Users, CalendarCheck, Phone } from "lucide-react";
-import { CLINIC, IMAGES, HIGHLIGHTS } from "@/data";
+import { Phone, Globe, Sparkles, Check } from "lucide-react";
+import { CLINIC, DOCTORS } from "@/data";
 
-const ICONS = { Award, Languages, Users, CalendarCheck };
+const DoctorCard = ({ doc, index }) => (
+  <article
+    data-testid={`doctor-card-${doc.id}`}
+    className="reveal flex flex-col overflow-hidden rounded-[2rem] bg-white/[0.04] border border-white/10 backdrop-blur-sm"
+    style={{ animationDelay: `${index * 0.12}s` }}
+  >
+    <div className="relative">
+      <img
+        src={doc.photo}
+        alt={`${doc.name}, ${doc.role} at Thompson Square Medical Centre`}
+        className="w-full h-80 object-cover object-top"
+        loading="lazy"
+      />
+      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#12241c] to-transparent" />
+      {doc.accepting && (
+        <span
+          data-testid={`doctor-accepting-${doc.id}`}
+          className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-[#3ec78a] px-3 py-1.5 text-xs font-semibold text-[#0f2019] shadow-lg"
+        >
+          <Sparkles className="h-3.5 w-3.5" /> Accepting New Patients
+        </span>
+      )}
+    </div>
+
+    <div className="flex flex-1 flex-col p-7">
+      <h3 className="font-display text-2xl font-semibold text-white">{doc.name}</h3>
+      <p className="mt-1 text-sm text-[#a9c9b3]">{doc.role}</p>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {doc.credentials.map((c) => (
+          <span
+            key={c}
+            className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80"
+          >
+            {c}
+          </span>
+        ))}
+      </div>
+
+      <div className="mt-5 space-y-3 text-sm leading-relaxed text-[#d4ddd7]">
+        {doc.bio.map((p, i) => (
+          <p key={i}>{p}</p>
+        ))}
+      </div>
+
+      {doc.languages && (
+        <p className="mt-4 inline-flex items-center gap-2 text-sm text-[#a9c9b3]">
+          <Globe className="h-4 w-4" /> {doc.languages}
+        </p>
+      )}
+
+      <div className="mt-5">
+        <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#7fd4a8]">
+          Areas of Expertise
+        </p>
+        <ul className="mt-3 grid grid-cols-2 gap-2">
+          {doc.expertise.map((e) => (
+            <li key={e} className="flex items-start gap-2 text-sm text-[#d4ddd7]">
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#7fd4a8]" />
+              {e}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <a
+        href={`tel:${CLINIC.phoneRaw}`}
+        data-testid={`doctor-call-${doc.id}`}
+        className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-[#1a2e24] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#d1e2c4]"
+      >
+        <Phone className="h-4 w-4" /> Book with {doc.name.split(" ").slice(0, 2).join(" ")}
+      </a>
+    </div>
+  </article>
+);
 
 export const Doctor = () => {
   return (
     <section id="doctor" className="py-20 lg:py-28 bg-[#1a2e24] text-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
-        <div className="relative">
-          <div className="absolute inset-0 -m-4 rounded-[2.5rem] bg-[#4a7a61]/25 blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-[#2c5140] to-[#1f3a2d] shadow-2xl">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(127,212,168,0.25),transparent_60%)]" />
-            <img
-              src={IMAGES.doctor}
-              alt="Dr. Aliya Ali, Family Physician at Thompson Square Medical Centre"
-              className="relative w-full h-[480px] object-contain object-bottom pt-8"
-              loading="lazy"
-            />
-          </div>
-        </div>
-
-        <div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-2xl">
           <span className="text-sm font-bold tracking-[0.2em] uppercase text-[#a9c9b3]">
-            Meet Your Doctor
+            Meet Our Doctors
           </span>
           <h2 className="mt-4 text-3xl sm:text-4xl font-medium tracking-tight">
-            Dr. Aliya Ali
+            Compassionate care from physicians you can trust
           </h2>
-          <p className="mt-1 text-[#a9c9b3] font-medium">Family Physician · Low-Risk Obstetrics</p>
+          <p className="mt-4 text-[#a9c9b3] leading-relaxed">
+            Our family physicians deliver patient-centred care for every stage of
+            life — with <strong className="text-white">Dr. Irma Khan currently accepting new patients</strong> and
+            walk-ins welcome for non-registered patients, subject to daily clinic capacity.
+          </p>
+        </div>
 
-          <div className="mt-6 space-y-4 text-[#d4ddd7] leading-relaxed text-sm sm:text-base">
-            <p>
-              Dr. Aliya Ali completed postgraduate training in Family Medicine,
-              followed by a Fellowship in Low-Risk Obstetrics at the University of
-              Toronto. After graduating from medical school with distinction and
-              honors, she initially specialized in Obstetrics and Gynecology,
-              completing a five-year residency program.
-            </p>
-            <p>
-              She subsequently practiced in Women's Health, Pediatrics, and
-              Emergency Medicine, caring for patients across all stages of life.
-              Licensed to practice in Canada and affiliated with Trillium Health
-              Partners, she has provided low-risk obstetrical care since 2019.
-            </p>
-            <p>
-              Fluent in <strong className="text-white">English, Urdu, Punjabi and Pashto</strong>,
-              Dr. Ali is dedicated to compassionate, patient-centred care for
-              families from diverse backgrounds — and is pleased to welcome
-              walk-in patients and new patients into her practice.
-            </p>
-          </div>
-
-          <div className="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3">
-            {HIGHLIGHTS.map((h) => {
-              const Icon = ICONS[h.icon];
-              return (
-                <div
-                  key={h.label}
-                  data-testid={`doctor-highlight-${h.icon.toLowerCase()}`}
-                  className="rounded-2xl bg-white/5 border border-white/10 p-4 backdrop-blur-sm"
-                >
-                  <Icon className="h-5 w-5 text-[#a9c9b3]" />
-                  <p className="mt-3 font-display text-lg font-semibold">{h.stat}</p>
-                  <p className="text-xs text-[#a9c9b3] mt-0.5 leading-snug">{h.label}</p>
-                </div>
-              );
-            })}
-          </div>
-
-          <a
-            href={`tel:${CLINIC.phoneRaw}`}
-            data-testid="doctor-call-btn"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-[#1a2e24] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#d1e2c4]"
-          >
-            <Phone className="h-5 w-5" /> Book with Dr. Ali
-          </a>
+        <div className="mt-12 grid lg:grid-cols-2 gap-8">
+          {DOCTORS.map((doc, i) => (
+            <DoctorCard key={doc.id} doc={doc} index={i} />
+          ))}
         </div>
       </div>
     </section>
