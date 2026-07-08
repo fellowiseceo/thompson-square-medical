@@ -23,12 +23,9 @@ export const HOURS = [
 
 export const IMAGES = {
   logo: "/logo.png",
+  building: "/clinic-exterior.jpg",
   doctor:
     "https://customer-assets.emergentagent.com/job_dr-aliya-family/artifacts/dscxl2sv_Gemini_Generated_Image_r7re2fr7re2fr7re-removebg-preview.png",
-  building:
-    "https://customer-assets.emergentagent.com/job_dr-aliya-family/artifacts/9kclix7j_image.png",
-  building2:
-    "https://customer-assets.emergentagent.com/job_dr-aliya-family/artifacts/4dizu0mh_image.png",
   heroBg:
     "https://images.unsplash.com/photo-1631217871099-88310a909a32?w=1920&q=80",
   waiting: "https://images.unsplash.com/photo-1762625570087-6d98fca29531?w=1200&q=80",
@@ -38,6 +35,14 @@ export const IMAGES = {
     "https://images.pexels.com/photos/7653088/pexels-photo-7653088.jpeg?auto=compress&cs=tinysrgb&w=1200",
   desk: "https://images.unsplash.com/photo-1764727291644-5dcb0b1a0375?w=1200&q=80",
 };
+
+export const GALLERY = [
+  { src: "/clinic-exterior.jpg", alt: "Thompson Square Medical Centre storefront at 9021 Derry Rd, Milton" },
+  { src: "/clinic-exam-1.jpg", alt: "Bright examination room with medical equipment at Thompson Square Medical Centre" },
+  { src: "/clinic-hallway.jpg", alt: "Clean patient hallway with treatment bays at Thompson Square Medical Centre" },
+  { src: "/clinic-exam-2.jpg", alt: "Comfortable consultation and examination room" },
+  { src: "/clinic-procedure.jpg", alt: "Procedure and vitals room with weighing and monitoring equipment" },
+];
 
 export const SERVICE_GROUPS = [
   {

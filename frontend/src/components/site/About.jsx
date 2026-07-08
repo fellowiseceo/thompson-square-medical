@@ -42,8 +42,8 @@ export const About = () => {
 
             <div className="absolute -bottom-8 -right-4 sm:right-6 w-44 sm:w-52 overflow-hidden rounded-2xl border-4 border-white shadow-xl">
               <img
-                src={IMAGES.family}
-                alt="Dr. Ali providing family-centred care to a mother and child"
+                src="/clinic-exam-1.jpg"
+                alt="Bright, fully equipped examination room at Thompson Square Medical Centre"
                 className="w-full h-40 object-cover"
                 loading="lazy"
               />
