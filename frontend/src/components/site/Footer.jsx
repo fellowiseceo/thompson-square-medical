@@ -55,6 +55,14 @@ export const Footer = () => {
             © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
+
+        <p className="border-t border-white/10 pt-8 pb-4 text-center text-xs leading-relaxed text-[#6f8479] max-w-3xl mx-auto">
+          Thompson Square Medical Centre is a family doctor and walk-in clinic in
+          Milton, Ontario. Our family physicians provide family medicine,
+          walk-in care, preventive health, women's health, pediatrics and chronic
+          disease management — proudly serving Milton, Oakville, Georgetown and the
+          Halton Region. Dr. Irma Khan is currently accepting new patients.
+        </p>
       </div>
     </footer>
   );
