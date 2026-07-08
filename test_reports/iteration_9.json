@@ -1,0 +1,40 @@
+{
+  "summary": "Verified bug fix for mobile white-space-below-footer on Thompson Square Medical Centre landing page. All assertions PASS on both mobile (390x844) and desktop (1920x900). html/body backgrounds are dark green rgb(18,36,28) as required; content wrapper (.App) still has bone bg rgb(249,248,246); sections retain correct colors (hero dark, About white, Gallery bone, Location white, Doctor dark). No horizontal overflow, no broken images, nav links work, gallery lightbox opens.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "index.css has `@layer base { body { @apply bg-background text-foreground; } }` after the plain body { background-color:#12241c }. Currently the utility-layer bg does NOT visibly override (Tailwind base is loaded before this layer or specificity ties broke correctly), and computed body bg is confirmed rgb(18,36,28). Still, this is fragile — if Tailwind base order ever shifts, body could revert to --background (bone). Recommend removing the `body { @apply bg-background }` line or use `!important` / body-specific class to make the dark-green background intentional and robust."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (frontend-only test)", "frontend": "100%"},
+  "test_credentials": "None - static public site",
+  "seed_data_creation": "None",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Bug fix verified: html/body bg-color set to #12241c (rgb(18,36,28)) with overflow-x:hidden. Mobile scrollWidth=390, innerWidth=390 -> no horizontal overflow. Footer computed bg is rgb(26,46,36) (footer element uses slightly different #1a2e24) and blends with the surrounding html/body dark green so no white gap is visible below footer. Content wrapper .App keeps bone bg. All nav clicks, gallery lightbox, images load correctly. No console errors beyond dev tooling info logs.",
+  "verified_measurements": {
+    "mobile_body_bg": "rgb(18, 36, 28)",
+    "mobile_html_bg": "rgb(18, 36, 28)",
+    "desktop_body_bg": "rgb(18, 36, 28)",
+    "desktop_html_bg": "rgb(18, 36, 28)",
+    "mobile_scrollWidth": 390,
+    "mobile_innerWidth": 390,
+    "app_wrapper_bg": "rgb(249, 248, 246)",
+    "hero_top_bg": "rgb(18, 36, 28)",
+    "about_bg": "rgb(255, 255, 255)",
+    "gallery_bg": "rgb(249, 248, 246)",
+    "doctor_bg": "rgb(26, 46, 36)",
+    "location_bg": "rgb(255, 255, 255)",
+    "footer_bg": "rgb(26, 46, 36)",
+    "total_images": 19,
+    "broken_images": 0,
+    "gallery_lightbox_opens": true,
+    "nav_links_all_work": true
+  }
+}
