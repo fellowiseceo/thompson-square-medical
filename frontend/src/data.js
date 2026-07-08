@@ -152,8 +152,8 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "Compassionate, thorough and genuinely kind. Dr. Ali speaks our language and makes every visit comfortable. Truly outstanding care.",
+      "Compassionate, thorough and genuinely kind. Dr. Khan explained everything clearly and made me feel completely at ease as a new patient. Truly outstanding care.",
     name: "Priya K.",
-    detail: "Patient since 2019",
+    detail: "New patient, 2025",
   },
 ];
