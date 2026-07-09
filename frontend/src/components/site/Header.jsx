@@ -44,7 +44,7 @@ export const Header = () => {
         >
           <span className="inline-flex items-center gap-1.5">
             <Clock className={`h-3.5 w-3.5 ${light ? "text-[#7fd4a8]" : "text-[#4a7a61]"}`} />
-            Mon &amp; Sun Closed · Tue–Fri 10AM–5PM · Sat 10AM–4PM
+            Mon &amp; Sun Closed · Open Tue–Sat
           </span>
           <span className={light ? "text-white/25" : "text-black/15"}>|</span>
           <a href={`mailto:${CLINIC.email}`} className="inline-flex items-center gap-1.5 hover:opacity-80">

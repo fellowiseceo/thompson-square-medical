@@ -3,7 +3,7 @@ export const CLINIC = {
   doctor: "Dr. Aliya Ali",
   phone: "(905) 878-1977",
   phoneRaw: "9058781977",
-  email: "ayubakhthar@gmail.com",
+  email: "Medicalcentre@thompsonderry.com",
   address: "9021 Derry Rd #12, Milton, ON L9T 7Y9",
   mapEmbed:
     "https://www.google.com/maps?q=9021+Derry+Rd+%2312+Milton+ON+L9T+7Y9&output=embed",
@@ -13,10 +13,10 @@ export const CLINIC = {
 
 export const HOURS = [
   { day: "Monday", time: "Closed", closed: true },
-  { day: "Tuesday", time: "10:00 AM – 5:00 PM" },
-  { day: "Wednesday", time: "10:00 AM – 5:00 PM" },
-  { day: "Thursday", time: "10:00 AM – 5:00 PM" },
-  { day: "Friday", time: "10:00 AM – 5:00 PM" },
+  { day: "Tuesday", time: "10:00 AM – 6:00 PM" },
+  { day: "Wednesday", time: "10:00 AM – 6:00 PM" },
+  { day: "Thursday", time: "9:00 AM – 4:00 PM" },
+  { day: "Friday", time: "10:00 AM – 6:00 PM" },
   { day: "Saturday", time: "10:00 AM – 4:00 PM" },
   { day: "Sunday", time: "Closed", closed: true },
 ];

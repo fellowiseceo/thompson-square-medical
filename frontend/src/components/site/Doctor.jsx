@@ -1,4 +1,4 @@
-import { Phone, Globe, Sparkles, Check } from "lucide-react";
+import { Phone, Globe, Sparkles } from "lucide-react";
 import { CLINIC, DOCTORS } from "@/data";
 
 const DoctorCard = ({ doc, index }) => (
@@ -11,7 +11,7 @@ const DoctorCard = ({ doc, index }) => (
       <img
         src={doc.photo}
         alt={`${doc.name}, ${doc.role} at Thompson Square Medical Centre`}
-        className="w-full h-80 object-cover object-top"
+        className="w-full h-96 lg:h-[440px] object-cover object-[center_22%]"
         loading="lazy"
       />
       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#12241c] to-transparent" />
@@ -51,20 +51,6 @@ const DoctorCard = ({ doc, index }) => (
           <Globe className="h-4 w-4" /> {doc.languages}
         </p>
       )}
-
-      <div className="mt-5">
-        <p className="text-xs font-bold uppercase tracking-[0.15em] text-[#7fd4a8]">
-          Areas of Expertise
-        </p>
-        <ul className="mt-3 grid grid-cols-2 gap-2">
-          {doc.expertise.map((e) => (
-            <li key={e} className="flex items-start gap-2 text-sm text-[#d4ddd7]">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#7fd4a8]" />
-              {e}
-            </li>
-          ))}
-        </ul>
-      </div>
 
       <a
         href={`tel:${CLINIC.phoneRaw}`}
