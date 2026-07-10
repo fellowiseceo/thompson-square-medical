@@ -132,10 +132,10 @@ export const DOCTORS = [
     name: "Dr. Irma Khan",
     role: "Family Physician",
     photo: "/dr-irma.jpg",
-    credentials: ["CCFP", "MRCGP", "DRCOG"],
+    credentials: [],
     accepting: true,
     bio: [
-      "Dr. Irma Khan, MD is currently accepting new patients at Thompson Square Medical Centre. A highly qualified practitioner with credentials including MRCGP, DRCOG and CCFP, she brings a wealth of expertise to the Milton community.",
+      "Dr. Irma Khan is currently accepting new patients at Thompson Square Medical Centre. As a dedicated Family Physician, she brings a wealth of expertise to the Milton community.",
       "Her practice is centred on compassionate, comprehensive family medical care for individuals and families. Operating as a family & walk-in practice, she ensures patients have flexible access to healthcare when they need it most.",
     ],
     languages: null,
