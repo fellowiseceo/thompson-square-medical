@@ -43,7 +43,7 @@ export const WelcomeModal = () => {
               Now Accepting New Patients
             </DialogTitle>
             <DialogDescription className="text-left text-[#4a5d53] leading-relaxed pt-2">
-              <strong>Dr. Irma Khan</strong> (CCFP, MRCGP, DRCOG) is currently
+              <strong>Dr. Irma Khan</strong> is currently
               welcoming <strong>new patients</strong> at Thompson Square Medical
               Centre. Walk-in services are also available for non-registered
               patients, subject to daily clinic capacity.
