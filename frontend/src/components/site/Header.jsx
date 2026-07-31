@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X, Phone, Clock, Mail, MapPin } from "lucide-react";
-import { CLINIC, IMAGES } from "@/data";
+import { CLINIC, IMAGES, ANNOUNCEMENT } from "@/data";
 
 const NAV = [
   { label: "About", href: "#about" },
@@ -23,7 +23,13 @@ export const Header = () => {
   const light = !scrolled;
 
   return (
-    <header
+    <>
+      {ANNOUNCEMENT.show && (
+        <div style={{background: "#1a5c3a", color: "white", textAlign: "center", padding: "10px 16px", fontSize: "14px", fontWeight: "500", zIndex: 9999, position: "relative"}}>
+          ⚠️ {ANNOUNCEMENT.message}
+        </div>
+      )}
+      <header
       data-testid="site-header"
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
         scrolled
@@ -153,5 +159,6 @@ export const Header = () => {
         </div>
       )}
     </header>
+    </>
   );
 };
