@@ -11,6 +11,11 @@ export const CLINIC = {
     "https://www.google.com/maps/dir/?api=1&destination=9021+Derry+Rd+%2312+Milton+ON+L9T+7Y9",
 };
 
+export const ANNOUNCEMENT = {
+  show: true,
+  message: "We have reached our maximum capacity for walk-ins today. Thank you for your understanding.",
+};
+
 export const HOURS = [
   { day: "Monday", time: "Closed", closed: true },
   { day: "Tuesday", time: "10:00 AM – 6:00 PM" },
