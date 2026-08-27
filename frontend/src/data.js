@@ -12,7 +12,7 @@ export const CLINIC = {
 };
 
 export const ANNOUNCEMENT = {
-  show: true,
+  show: false,
   message: "We have reached our maximum capacity for walk-ins today. Thank you for your understanding.",
 };
 
